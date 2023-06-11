@@ -4,6 +4,8 @@ Inorder to run the dbt in your local system follow the below steps
    - You will need Python installed on your computer. DBT is a command line tool that is installed with pip. You can install it using the command: `pip install dbt`
 2. Install Postgresql database and make sure you have the following four tables dummy_contacts, dummy_courses, dummy_associations, dummy_deals.
 	create these tables as mentiondedf from the sample csv files
+	
+```
 	CREATE TABLE dummy_contacts(id INTEGER,created_at TIMESTAMP,
  mql_date TEXT, -- change these to TEXT for now
     -- change these to TEXT for now
@@ -54,7 +56,7 @@ CREATE TABLE dummy_associations(from_type  VARCHAR(255),
 FROM '/path/dummy_associations.csv'
 DELIMITER ',' 
 CSV HEADER;
-
+```
 3. Clone the repository 
 	git clone  git@github.com:de-666611/dci.git
 4.  The `profiles.yml` file is where you tell dbt how to connect to your database. It will be created in a hidden directory: `~/.dbt/`
